@@ -1,9 +1,12 @@
-import React, { useState, useEffect } from 'react'
+import React, {  useEffect } from 'react'
 import icons from '../assets/nav-icons'
+import {  useDispatch, useSelector } from 'react-redux'
+
+import { selectTheme, setTheme } from '../redux/theme.Slice'
 
 const Sidebar = () => {
-  const [theme, setTheme] = useState("light")
-
+  const theme = useSelector(selectTheme)
+  const dispatch = useDispatch()
 
   useEffect(() => {
     if(theme === "dark") {
@@ -16,7 +19,7 @@ const Sidebar = () => {
   }, [theme])
 
   const handleThemeSwitch = () => {
-    setTheme(theme === "dark" ? "light" : "dark")
+    dispatch(setTheme(theme === "dark" ? "light" : "dark"))
   }
 
   return (
