@@ -13,7 +13,6 @@ function App() {
         <Header/>
         <SalesTrendAndCompareToPrev />
         <LastOrdersAndTopPlatform />
-          
         
       </div>
       

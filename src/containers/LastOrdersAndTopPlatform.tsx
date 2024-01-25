@@ -1,5 +1,6 @@
 import React from 'react'
 import LastOrders from '../components/LastOrders'
+import TopPlatform from '../components/TopPlatform'
 
 const LastOrdersAndTopPlatform = () => {
   return (
@@ -7,6 +8,11 @@ const LastOrdersAndTopPlatform = () => {
       <div className='col-span-4'>
         <LastOrders />
       </div>
+
+      <div className='col-span-3'>
+        <TopPlatform />
+      </div>
+      
       
     </div>
   )
