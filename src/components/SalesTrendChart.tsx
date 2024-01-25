@@ -78,7 +78,7 @@ export const data = {
 const SalesTrendChart = () => {
     const theme = useSelector(selectTheme)
   return (
-    <div className='w-[806px]  ml-5 mt-5 px-5 py-4 bg-[#FFF] dark:bg-[#0D0D0D] border border-[#EDF2F7] dark:border-[#1A1A1A] rounded-[14px] font-PJS'>
+    <div className='h-[374px]  ml-5 mt-5 px-5 py-4 bg-[#FFF] dark:bg-[#0D0D0D] border border-[#EDF2F7] dark:border-[#1A1A1A] rounded-[14px] font-PJS'>
         <div className='flex justify-between'>
             <h3 className='text-lg font-semibold text-[#26282C] dark:text-[#D3D5D9]'>Sales Trend</h3>
 
@@ -104,7 +104,12 @@ const SalesTrendChart = () => {
 
             </div>
         </div>
-        <Bar options={options} data={data} width={696} height={264} className='mt-4'/>
+
+        <div className=''>
+          <Bar options={options} data={data} width={696} height={264} className='mt-4'/>
+
+        </div>
+        
     </div>
   )
 }

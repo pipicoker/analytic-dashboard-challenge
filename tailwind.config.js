@@ -7,6 +7,10 @@ module.exports = {
       fontFamily: {
         "PJS": ["Plus Jakarta Sans"],
         'inter': "Inter"
+      },
+      colors: {
+        'light-green': 'rgba(52, 202, 165, 0.12)',
+        'light-red': 'rgba(237, 84, 78, 0.12)'
       }
     },
   },

@@ -1,5 +1,5 @@
 import React, {  useEffect } from 'react'
-import icons from '../assets/nav-icons'
+import icons from '../assets/data/nav-icons'
 import { useDispatch, useSelector } from 'react-redux'
 
 import { selectTheme, setTheme } from '../redux/theme.Slice'
@@ -51,7 +51,7 @@ const Sidebar = () => {
           </div>
 
         <div className='mt-6 bg-[#FFF] rounded-full p-2 flex  flex-col items-center space-y-4'>
-          {icons.slice(7, 9).map((icon, index) => (
+          {icons.slice(7, 9).map((icon, index: number) => (
             <div key={index} className={index === 0 ?  'bg-[#34CAA5] px-[7.5px] py-[6.56px] flex justify-center  rounded-[94px] items-center' : "bg-[#FFF"} 
             onClick={handleThemeSwitch}
             >{icon}</div>

@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Header from './containers/Header';
 import Sidebar from './components/Sidebar';
-import SalesTrendChart from './components/SalesTrendChart';
+import SalesTrendAndCompareToPrev from './containers/SalesTrendAndCompareToPrev';
 
 function App() {
   return (
@@ -10,10 +10,7 @@ function App() {
       <Sidebar />
       <div className='w-full'>
         <Header/>
-        <div className=''>
-         <SalesTrendChart />
-
-        </div>
+        <SalesTrendAndCompareToPrev />
           
         
       </div>
