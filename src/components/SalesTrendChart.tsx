@@ -106,7 +106,7 @@ const SalesTrendChart = () => {
         </div>
 
         <div className=''>
-          <Bar options={options} data={data} width={696} height={264} className='mt-4'/>
+          <Bar options={options} data={data} width={696} height={288} className='mt-4'/>
 
         </div>
         

@@ -10,7 +10,8 @@ module.exports = {
       },
       colors: {
         'light-green': 'rgba(52, 202, 165, 0.12)',
-        'light-red': 'rgba(237, 84, 78, 0.12)'
+        'light-red': 'rgba(237, 84, 78, 0.12)',
+        'tableHeading': 'var(--60, #9CA4AB)'
       }
     },
   },

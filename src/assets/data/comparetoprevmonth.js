@@ -1,7 +1,7 @@
 export const compareDate = [
         {
             title: 'total order',
-            amount: 350,
+            amount: "350",
             percentage: 25.5,
             type: 'increase',
             svg: (
@@ -17,7 +17,7 @@ export const compareDate = [
        
         {
             title: 'total refund',
-            amount: 270,
+            amount: "270",
             percentage: 23.5,
             type: 'decrease',
             svg: (
@@ -33,7 +33,7 @@ export const compareDate = [
  
         {
             title: 'average sales',
-            amount: 1567,
+            amount: "1567",
             percentage: 23.5,
             type: 'decrease',
             svg: (
@@ -50,7 +50,7 @@ export const compareDate = [
 
         {
             title: 'total income',
-            amount: 350.000,
+            amount: '$350.000',
             percentage: 23.5,
             type: 'increase',
             svg: (
