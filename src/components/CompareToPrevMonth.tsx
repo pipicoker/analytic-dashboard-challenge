@@ -4,7 +4,7 @@ import { compareDate } from '../assets/data/comparetoprevmonth'
 
 const CompareToPrevMonth: React.FC = () => {
   return (
-    <div className='mt-5 mx-5 grid grid-cols-2 gap-4'>
+    <div className='mt-5 mx-5 grid grid-cols-1 md:grid-cols-2 gap-4'>
         {compareDate.map((data, index:number) => (
             <div key={index} className='p-4  bg-[#FFF] dark:bg-[#0D0D0D] border border-[#EDF2F7] dark:border-[#1A1A1A]  inline-flex flex-col rounded-[14px] font-PJS'>
               

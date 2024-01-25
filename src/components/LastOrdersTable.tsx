@@ -6,8 +6,8 @@ import { selectTheme } from '../redux/theme.Slice'
 const LastOrdersTable = () => {
   const theme = useSelector(selectTheme)
   return (
-    <div className='mt-[14px]'>
-        <table className='text-left w-full divide-y'>
+    <div className='mt-[14px] overflow-y-auto no-scrollbar '>
+        <table className='text-left md:w-full divide-y w-[560px]  '>
             <tr className='text-tableHeading font-medium '>
                 <th className='pb-5'>Name</th>
                 <th className='pb-5'>Date</th>

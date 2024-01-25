@@ -1,4 +1,3 @@
-import React from 'react'
 import { useSelector } from 'react-redux';
 import { selectTheme } from '../redux/theme.Slice';
 
@@ -21,6 +20,7 @@ import {
 
   export const options = {
     responsive: true,
+    
     scales: {
         x: {
             grid: {
@@ -53,9 +53,13 @@ import {
 
   const labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
-  const hoverColor = "linear-gradient(180deg, #34CAA5 0%, rgba(52, 202, 165, 0.00) 100%), rgba(52, 202, 165, 0.10)";
+  // const canvas = document.getElementById('canvas') as HTMLCanvasElement
+  // const ctx = canvas.getContext("2d")
+  // const gradient = ctx?.createLinearGradient(0,0,0,400) 
+  // gradient?.addColorStop(0, 'rgba(52, 202, 165, 1)'); 
+  // gradient?.addColorStop(1, 'rgba(52, 202, 165, 0.00)');
 
-export const data = {
+ const data = {
   labels,
   datasets: [ {
     label: 'dataset',
@@ -63,7 +67,7 @@ export const data = {
     data: [60000, 32000, 10000, 8000, 9000, 2040, 12500, 37000, 19000, 4000, 17200, 13240],
     barThickness: 30,
     backgroundColor: 'rgba(52, 202, 165, 0.10)',
-    // hoverBackgroundColor: ,
+    hoverBackgroundColor: 'red',
 
   }
     
@@ -75,8 +79,11 @@ export const data = {
 
 const SalesTrendChart = () => {
     const theme = useSelector(selectTheme)
+
+ 
   return (
-    <div className='h-[374px]  ml-5 mt-5 px-5 py-4 bg-[#FFF] dark:bg-[#0D0D0D] border border-[#EDF2F7] dark:border-[#1A1A1A] rounded-[14px] font-PJS'>
+    <div className='h-[374px]  ml-5 mr-5 lg:mr-0 mt-5 px-5 py-4 bg-[#FFF] dark:bg-[#0D0D0D] border border-[#EDF2F7] dark:border-[#1A1A1A] rounded-[14px] font-PJS'>
+
         <div className='flex justify-between'>
             <h3 className='text-lg font-semibold text-[#26282C] dark:text-[#D3D5D9]'>Sales Trend</h3>
 
@@ -103,8 +110,9 @@ const SalesTrendChart = () => {
             </div>
         </div>
 
-        <div className=''>
-          <Bar options={options} data={data} width={696} height={288} className='mt-4'/>
+        <div className='h-full'>
+        <Bar options={options} data={data} width={window.innerWidth < 768 ? 300 : window.innerWidth < 1024 ? 696 : 696} height={window.innerWidth < 768 ? 200 : window.innerWidth < 1024 ? 250 : 288} className='mt-4' />
+
 
         </div>
         

@@ -15,7 +15,7 @@ const Header = () => {
     }); 
 
   return (
-    <header className='flex justify-between items-center bg-[#FAFAFA] dark:bg-[#1A222A] px-5 py-5 ' >
+    <header className='hidden lg:flex justify-between items-center bg-[#FAFAFA] dark:bg-[#1A222A] px-5 py-5 ' >
       <h1 className='text-[#26282C] dark:text-[#D3D5D9]  text-xl font-semibold'>Dashboard</h1>
 
       <div className='flex items-center font-inter'>
