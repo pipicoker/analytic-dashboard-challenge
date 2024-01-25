@@ -25,6 +25,13 @@ export const progressBarData = [
         progress: 32,
         amount: '800,000',
         percentage: 6,
-        color: 'pink'
+        color: 'red'
+    },
+    {
+        platform: 'Affizey',
+        progress: 25,
+        amount: '600,000',
+        percentage: 4,
+        color: 'green'
     },
 ]

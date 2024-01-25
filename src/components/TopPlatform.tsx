@@ -3,7 +3,7 @@ import ProgressBar from './ProgressBar'
 
 const TopPlatform = () => {
   return (
-    <div className='font-PJS bg-[#FFF] dark:bg-[#0D0D0D] mx-5 rounded-lg pl-5 pr-4 pt-4 pb-8'>
+    <div className='h-[478px] w-[488px] font-PJS bg-[#FFF] dark:bg-[#0D0D0D] ml-5 rounded-lg pl-5 pr-4 pt-4 pb-8'>
         <div className='flex justify-between'>
             <h3 className='text-[#26282C] dark:text-[#D3D5D9] text-lg font-semibold'>Top Platform</h3>
 

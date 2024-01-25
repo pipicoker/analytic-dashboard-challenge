@@ -12,7 +12,7 @@ const SearchInput = () => {
         </svg>
             
                 </div>
-                <input type="text" id="search" className="h-12 pl-10 text-[#A3A3A3]  rounded-3xl bg-[#FFF] dark:bg-[#0D0D0D] border  border-[#DADDDD] dark:border-[#2E3232]" placeholder="Search..." />
+                <input type="text" id="search" className="h-12 w-[349px] pl-10 text-[#A3A3A3]  rounded-3xl bg-[#FFF] dark:bg-[#0D0D0D] border  border-[#DADDDD] dark:border-[#2E3232]" placeholder="Search..." />
             </div>
        
         </form>

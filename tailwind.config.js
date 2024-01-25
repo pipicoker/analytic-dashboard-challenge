@@ -9,10 +9,12 @@ module.exports = {
         'inter': "Inter"
       },
       colors: {
+        'hover':'linear-gradient(180deg, #34CAA5 0%, rgba(52, 202, 165, 0.00) 100%)',
         'light-green': 'rgba(52, 202, 165, 0.12)',
         'light-red': 'rgba(237, 84, 78, 0.12)',
         'tableHeading': 'var(--60, #9CA4AB)'
       }
+
     },
   },
   plugins: [],

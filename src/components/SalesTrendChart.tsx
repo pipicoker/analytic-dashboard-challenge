@@ -53,11 +53,7 @@ import {
 
   const labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
-  let hoverColor = 'linear-gradient(180deg, #34CAA5 0%, rgba(52, 202, 165, 0.00) 100%)';
-  
-
-  
-
+  const hoverColor = "linear-gradient(180deg, #34CAA5 0%, rgba(52, 202, 165, 0.00) 100%), rgba(52, 202, 165, 0.10)";
 
 export const data = {
   labels,
@@ -67,12 +63,14 @@ export const data = {
     data: [60000, 32000, 10000, 8000, 9000, 2040, 12500, 37000, 19000, 4000, 17200, 13240],
     barThickness: 30,
     backgroundColor: 'rgba(52, 202, 165, 0.10)',
-    hoverBackgroundColor: hoverColor
+    // hoverBackgroundColor: ,
 
   }
     
   ],
 };
+
+
 
 
 const SalesTrendChart = () => {

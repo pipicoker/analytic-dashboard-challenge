@@ -3,12 +3,12 @@ import { progressBarData } from '../assets/data/progressbar'
 
 const ProgressBar = () => {
   return (
-    <div className='mt-5 flex flex-col gap-5    '>
+    <div className='mt-5 flex flex-col gap-y-5   h-[410px] overflow-auto no-scrollbar'>
         {progressBarData.map((data, index:number) => (
             <div key={index} className=''>
                 <p className='text-[#22242C] dark:text-[#D3D5DD] text-lg font-semibold'>{data.platform}</p>
 
-                <div className='w-[452px] bg-[#F5F5F5] dark:bg-[#171717] mt-[17px]'>
+                <div className='w-[452px] h-3 bg-[#F5F5F5] dark:bg-[#171717] mt-[17px]'>
                 <div style={{width: `${data.progress}%`, background: data.color}} className='h-3 rounded-[40px]'>
                 </div>
                 </div>

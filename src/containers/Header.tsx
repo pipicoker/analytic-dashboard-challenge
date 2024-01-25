@@ -12,10 +12,10 @@ const Header = () => {
       month: 'long',
       day: 'numeric',
       year: 'numeric',
-    });
+    }); 
 
   return (
-    <header className='flex justify-between items-center bg-[#E5EAEF] dark:bg-[#121212] px-5 py-5 ' >
+    <header className='flex justify-between items-center bg-[#FAFAFA] dark:bg-[#1A222A] px-5 py-5 ' >
       <h1 className='text-[#26282C] dark:text-[#D3D5D9]  text-xl font-semibold'>Dashboard</h1>
 
       <div className='flex items-center font-inter'>

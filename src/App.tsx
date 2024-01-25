@@ -9,10 +9,14 @@ function App() {
   return (
     <div className="App font-PJS flex bg-[#FAFAFA] dark:bg-[#1A222A]">
       <Sidebar />
-      <div className='w-full'>
+      <div className='w-full  divide-y divide-[#E5EAEF] dark:divide-[#121212]'>
         <Header/>
-        <SalesTrendAndCompareToPrev />
-        <LastOrdersAndTopPlatform />
+        <div>
+          <SalesTrendAndCompareToPrev />
+          <LastOrdersAndTopPlatform />
+
+        </div>
+        
         
       </div>
       
