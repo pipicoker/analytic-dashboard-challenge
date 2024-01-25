@@ -34,7 +34,7 @@ export const lastOrders = [
         status: 'Refund'
     },
     {
-        pix: marcus,
+        pix: philip,
         name: 'Philip Lubin',
         date: 'Nov 13, 2023',
         amount: '78,000',

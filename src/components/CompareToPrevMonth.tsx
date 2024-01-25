@@ -1,11 +1,6 @@
 import React from 'react'
 import { compareDate } from '../assets/data/comparetoprevmonth'
-interface DataObject {
-    title: string;
-    amount: number;
-    percentage: number;
-    type: string;
-  }
+
 
 const CompareToPrevMonth: React.FC = () => {
   return (
@@ -52,14 +47,14 @@ const CompareToPrevMonth: React.FC = () => {
 
               <div className='mt-[10px] flex gap-[10px] items-center'>
                 <div className={`${data.type ==='increase' ? 'bg-light-green text-[#34CAA5]' : 'bg-light-red text-[#ED544E]'} w-[70px] rounded-[1000px] justify-center items-center flex gap-1  py-1 text-xs font-medium`}>
-                    {data.type == 'increase' && (
+                    {data.type === 'increase' && (
                       <svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none">
                       <path d="M0.5 5.5L3.5 2.5L5.5 4.5L9.5 0.5" stroke="#34CAA5" stroke-linecap="round" stroke-linejoin="round"/>
                       <path d="M6 0.5H9.5V4" stroke="#34CAA5" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>  
                     )}
 
-                    {data.type == 'decrease' && (
+                    {data.type === 'decrease' && (
                       <svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none">
                       <path d="M0.5 0.5L3.5 3.5L5.5 1.5L9.5 5.5" stroke="#ED544E" stroke-linecap="round" stroke-linejoin="round"/>
                       <path d="M6 5.5H9.5V2" stroke="#ED544E" stroke-linecap="round" stroke-linejoin="round"/>
