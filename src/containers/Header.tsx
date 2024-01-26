@@ -29,7 +29,7 @@ const Header = () => {
       <div className='flex items-center font-inter'>
         <SearchInput />
 
-        <div className='flex items-center pl-[22px] gap-x-2.5'>
+        <div className='flex items-center md:pl-[22px] gap-x-2.5'>
 
           <div className={theme === "light" ? 'hidden md:flex ' : 'hidden'}>
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
