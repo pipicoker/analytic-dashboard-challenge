@@ -15,11 +15,11 @@ const UserProfileDropdown = () => {
     <div className='ml-5'>
             <div className='flex items-center gap-x-3  rounded-[28px] border border-[#DADDDD] dark:border-[#2F3232] py-1.5 px-2'>
                 <img src={profile} alt="profile pix" className='w-[38px] h-[38px] rounded-[19px]'/>
-                <div className='text-right'>
+                <div className='hidden lg:flex lg:flex-col text-right' >
                 <p className='text-[#26282C] dark:text-[#D3D5D9]'>Justin Bergson</p>
                 <p className='text-sm text-[#787486] dark:text-[#787486]'>Justin@gmail.com</p>
                 </div>
-                <button  id="dropdownDefaultButton" data-dropdown-toggle="dropdown" type="button"
+                <button className='hidden lg:flex'  id="dropdownDefaultButton" data-dropdown-toggle="dropdown" type="button"
                 onClick={toggleDropdown}
                 >
                     <div className={theme === "light" ? 'flex' : 'hidden'}>
