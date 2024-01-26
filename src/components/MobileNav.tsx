@@ -1,12 +1,20 @@
-import React, {  useEffect } from 'react'
+import React, {  useEffect , useState} from 'react'
 import icons from '../assets/data/nav-icons'
 import { useDispatch, useSelector } from 'react-redux'
 
 import { selectTheme, setTheme } from '../redux/theme.Slice'
 const MobileNav = () => {
     const theme = useSelector(selectTheme)
+    const [activebtn, setActivebtn] = useState(0)
+
     const dispatch = useDispatch()
   
+    const handleThemeSwitch = (index: number) => {
+        dispatch(setTheme(theme === "dark" ? "light" : "dark"))
+        setActivebtn(index)
+      }
+
+
     useEffect(() => {
       if(theme === "dark") {
         document.documentElement.classList.add('dark')
@@ -17,9 +25,7 @@ const MobileNav = () => {
   
     }, [theme])
   
-    const handleThemeSwitch = () => {
-      dispatch(setTheme(theme === "dark" ? "light" : "dark"))
-    }
+    
   return (
     <nav className='w-screen py-4   bottom-0 fixed flex lg:hidden space-x-6 md:space-x-12 items-center md:justify-center bg-[#F7F8FA] dark:bg-[#131313] border-r border-r-[#EBECF2] dark:border-r-[#171823] overflow-x-scroll no-scrollbar'>
         <div className='hidden md:flex'>
@@ -48,10 +54,12 @@ const MobileNav = () => {
             ))}
           </div>
 
-        <div className=' bg-[#FFF] rounded-full p-2 flex space-x-6  items-center '>
+          <div className='  bg-[#FFF] dark:bg-[#0D0D0D] rounded-full p-2 flex   items-center space-x-6'>
           {icons.slice(7, 9).map((icon, index: number) => (
-            <div key={index} className={index === 0 ?  'bg-[#34CAA5] px-[7.5px] py-[6.56px] flex justify-center  rounded-[94px] items-center' : "bg-[#FFF"} 
-            onClick={handleThemeSwitch}
+            <div 
+            key={index} 
+            className={index === activebtn ?  'bg-[#34CAA5] w-[30px] h-[30px] flex   rounded-full items-center justify-center' : "bg-[#FFF"} 
+            onClick={() => handleThemeSwitch(index)}
             >{icon}</div>
           ))}
         </div>

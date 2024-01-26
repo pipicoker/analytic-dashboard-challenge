@@ -109,7 +109,7 @@ const SalesTrendChart = () => {
       visible: {opacity: 1,  y: 0,},
     }}
     transition={{duration: 1, }}
-    className='md:h-[374px] mx-3 md:mx-5 lg:mr-0 mt-5 px-5 py-4 bg-[#FFF] dark:bg-[#0D0D0D] border border-[#EDF2F7] dark:border-[#1A1A1A] rounded-[14px] font-PJS'>
+    className='md:h-[374px] mx-4 md:mx-5 lg:mr-0 mt-5 px-5 py-4 bg-[#FFF] dark:bg-[#0D0D0D] border border-[#EDF2F7] dark:border-[#1A1A1A] rounded-[14px] font-PJS'>
 
         {/* this section contains the heaing for the chart */}
         <div className='flex justify-between items-center'>

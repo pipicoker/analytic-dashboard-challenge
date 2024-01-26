@@ -1,4 +1,4 @@
-import React, {  useEffect } from 'react'
+import React, {  useEffect, useState } from 'react'
 import icons from '../assets/data/nav-icons'
 import { useDispatch, useSelector } from 'react-redux'
 
@@ -6,6 +6,7 @@ import { selectTheme, setTheme } from '../redux/theme.Slice'
 
 const Sidebar = () => {
   const theme = useSelector(selectTheme)
+  const [activebtn, setActivebtn] = useState(0)
   const dispatch = useDispatch()
 
   useEffect(() => {
@@ -18,8 +19,9 @@ const Sidebar = () => {
 
   }, [theme])
 
-  const handleThemeSwitch = () => {
+  const handleThemeSwitch = (index: number) => {
     dispatch(setTheme(theme === "dark" ? "light" : "dark"))
+    setActivebtn(index)
   }
 
   return (
@@ -50,10 +52,12 @@ const Sidebar = () => {
             ))}
           </div>
 
-        <div className='mt-6 bg-[#FFF] rounded-full p-2 flex  flex-col items-center space-y-4'>
+        <div className='mt-6 bg-[#FFF] dark:bg-[#0D0D0D] rounded-full p-2 flex  flex-col items-center space-y-4'>
           {icons.slice(7, 9).map((icon, index: number) => (
-            <div key={index} className={index === 0 ?  'bg-[#34CAA5] px-[7.5px] py-[6.56px] flex justify-center  rounded-[94px] items-center' : "bg-[#FFF"} 
-            onClick={handleThemeSwitch}
+            <div 
+            key={index} 
+            className={index === activebtn ?  'bg-[#34CAA5] w-[30px] h-[30px] flex justify-center  rounded-[94px] items-center' : "bg-[#FFF"} 
+            onClick={() => handleThemeSwitch(index)}
             >{icon}</div>
           ))}
         </div>

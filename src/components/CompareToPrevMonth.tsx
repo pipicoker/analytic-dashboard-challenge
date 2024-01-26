@@ -26,7 +26,7 @@ const CompareToPrevMonth: React.FC = () => {
               visible: {opacity: 1,  y: 0,},
             }}
             transition={{duration: 3, }}
-    className='mt-5 mx-3 md:mx-5 grid grid-cols-1 md:grid-cols-2 gap-4'>
+    className='mt-5 mx-4 md:mx-5 grid grid-cols-1 md:grid-cols-2 gap-4'>
 
         {compareDate.map((data, index:number) => (
             <motion.div
