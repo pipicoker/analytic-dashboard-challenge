@@ -22,16 +22,16 @@ const Header = () => {
     <path fill-rule="evenodd" clip-rule="evenodd" d="M20 40C31.0457 40 40 31.0457 40 20C40 8.95431 31.0457 0 20 0C8.95429 0 0 8.95431 0 20C0 31.0457 8.95429 40 20 40ZM26.2393 9.31684C26.543 8.23805 25.4961 7.60013 24.54 8.2813L11.1931 17.7896C10.1562 18.5283 10.3193 20 11.4381 20H14.9527V19.9728H21.8025L16.2212 21.9421L13.7607 30.6832C13.457 31.762 14.5038 32.3999 15.46 31.7187L28.8069 22.2105C29.8438 21.4718 29.6806 20 28.5619 20H23.2321L26.2393 9.31684Z" fill="#34CAA5"/>
             </svg>
           </div>
-          <h1 className='hidden md:flex text-[#26282C] dark:text-[#D3D5D9]  text-lg md:text-xl font-semibold'>Dashboard</h1>
+          <h1 className='flex text-[#26282C] dark:text-[#D3D5D9]  text-lg md:text-xl font-semibold'>Dashboard</h1>
       </div>
      
 
       <div className='flex items-center font-inter'>
         <SearchInput />
 
-        <div className='hidden md:flex items-center pl-[22px] gap-x-2.5'>
+        <div className='flex items-center pl-[22px] gap-x-2.5'>
 
-          <div className={theme === "light" ? 'flex' : 'hidden'}>
+          <div className={theme === "light" ? 'hidden md:flex ' : 'hidden'}>
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
         <path d="M2 9.79483C2 6.70067 2 5.15318 2.9376 4.19236C3.8744 3.23071 5.3832 3.23071 8.4 3.23071H11.6C14.6168 3.23071 16.1256 3.23071 17.0624 4.19236C18 5.15318 18 6.70067 18 9.79483V11.4359C18 14.53 18 16.0775 17.0624 17.0383C16.1256 18 14.6168 18 11.6 18H8.4C5.3832 18 3.8744 18 2.9376 17.0383C2 16.0775 2 14.53 2 11.4359V9.79483Z"  stroke="black" stroke-width="1.37144"/>
         <path d="M5.9999 3.23077V2M13.9999 3.23077V2M2.3999 7.33334H17.5999" stroke="black" stroke-width="1.37144" stroke-linecap="round"/>
@@ -40,7 +40,7 @@ const Header = () => {
           </div>
 
 
-          <div className={theme === "light" ? 'hidden' : 'flex'}>
+          <div className={theme === "light" ? 'hidden' : 'hidden md:flex'}>
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
             <path d="M2 9.79483C2 6.70067 2 5.15318 2.9376 4.19236C3.8744 3.23071 5.3832 3.23071 8.4 3.23071H11.6C14.6168 3.23071 16.1256 3.23071 17.0624 4.19236C18 5.15318 18 6.70067 18 9.79483V11.4359C18 14.53 18 16.0775 17.0624 17.0383C16.1256 18 14.6168 18 11.6 18H8.4C5.3832 18 3.8744 18 2.9376 17.0383C2 16.0775 2 14.53 2 11.4359V9.79483Z" stroke="white" stroke-width="1.37144"/>
             <path d="M5.9999 3.23077V2M13.9999 3.23077V2M2.3999 7.33334H17.5999" stroke="white" stroke-width="1.37144" stroke-linecap="round"/>
