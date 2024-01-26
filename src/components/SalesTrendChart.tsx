@@ -80,16 +80,19 @@ import {
 const SalesTrendChart = () => {
     const theme = useSelector(selectTheme)
 
+    if (window.innerWidth < 768) {
+      data.datasets[0].barThickness = 18; 
+    }
  
   return (
     <div className='md:h-[374px]  ml-5 mr-5 lg:mr-0 mt-5 px-5 py-4 bg-[#FFF] dark:bg-[#0D0D0D] border border-[#EDF2F7] dark:border-[#1A1A1A] rounded-[14px] font-PJS'>
 
-        <div className='flex justify-between'>
-            <h3 className='text-lg font-semibold text-[#26282C] dark:text-[#D3D5D9]'>Sales Trend</h3>
+        <div className='flex justify-between items-center'>
+            <h3 className='md:text-lg font-semibold text-[#26282C] dark:text-[#D3D5D9]'>Sales Trend</h3>
 
             <div className='flex items-center gap-3 text-sm font-medium text-[#3A3F51]'>
                 Sort by: 
-                <div className='flex items-center border border-[#E1DFDF] dark:border-[#2D2A2A] bg-[#FFF] dark:bg-[#0D0D0D] px-4 py-1.5 rounded-[20px] gap-[10px] text-xs '>
+                <div className='flex items-center border border-[#E1DFDF] dark:border-[#2D2A2A] bg-[#FFF] dark:bg-[#0D0D0D] px-3 md:px-4 py-1.5 rounded-[20px] gap-[8px] md:gap-[10px] text-xs '>
                     Weekly
                     <div className={theme === 'light' ? 'flex' : 'hidden'}>
                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
