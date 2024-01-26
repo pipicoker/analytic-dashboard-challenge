@@ -1,5 +1,7 @@
-import { useSelector } from 'react-redux';
+import {useRef, useEffect} from 'react'
+import { useSelector,  } from 'react-redux';
 import { selectTheme } from '../redux/theme.Slice';
+import {useAnimation, motion, useInView} from 'framer-motion'
 
 import {
     Chart as ChartJS,
@@ -18,13 +20,13 @@ import {
     Tooltip
   );
 
-  export const options = {
+   const options = {
     responsive: true,
     
     scales: {
         x: {
             grid: {
-                display: false,
+                display: false, 
             },
             ticks : {
                 color: '#525252',
@@ -53,40 +55,63 @@ import {
 
   const labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
-  // const canvas = document.getElementById('canvas') as HTMLCanvasElement
-  // const ctx = canvas.getContext("2d")
-  // const gradient = ctx?.createLinearGradient(0,0,0,400) 
-  // gradient?.addColorStop(0, 'rgba(52, 202, 165, 1)'); 
-  // gradient?.addColorStop(1, 'rgba(52, 202, 165, 0.00)');
 
- const data = {
-  labels,
-  datasets: [ {
-    label: 'dataset',
-    borderRadius: 20,
-    data: [60000, 32000, 10000, 8000, 9000, 2040, 12500, 37000, 19000, 4000, 17200, 13240],
-    barThickness: 30,
-    backgroundColor: 'rgba(52, 202, 165, 0.10)',
-    hoverBackgroundColor: 'red',
-
+  const generateGradientColors = (context: any) => {
+    const gradient = context.chart.ctx.createLinearGradient(0, 0, 0, 400);
+    gradient.addColorStop(0, "rgba(52, 202, 165, 1)"); // Start color at the bottom of the bar
+    gradient.addColorStop(1, "rgba(255, 255, 255, 0.1)");
+    return gradient;
+  };
+   
+  let data = {
+    labels,
+        datasets: [ {
+          label: 'dataset',
+          borderRadius: 20,
+          data: [60000, 32000, 10000, 8000, 9000, 2040, 12500, 37000, 19000, 4000, 17200, 13240],
+          barThickness: 30,
+          backgroundColor: 'rgba(52, 202, 165, 0.10)',
+          hoverBackgroundColor: generateGradientColors
+        }
+          
+        ],
   }
     
-  ],
-};
-
-
 
 
 const SalesTrendChart = () => {
     const theme = useSelector(selectTheme)
 
+    // adjust bar thickness for mobile screen
     if (window.innerWidth < 768) {
       data.datasets[0].barThickness = 18; 
     }
+
+    const controls = useAnimation()
+  const ref = useRef(null)
+  const inView = useInView(ref)
+
+  useEffect(() => {
+      if(inView) {
+          controls.start('visible')
+      }
+      else{
+          controls.start('hidden')
+      }
+  }, [controls, inView])
  
   return (
-    <div className='md:h-[374px]  ml-5 mr-5 lg:mr-0 mt-5 px-5 py-4 bg-[#FFF] dark:bg-[#0D0D0D] border border-[#EDF2F7] dark:border-[#1A1A1A] rounded-[14px] font-PJS'>
+    <motion.div 
+    ref={ref}
+    animate={controls}
+    variants={{
+      hidden: {opacity: 0,  y: 75,},
+      visible: {opacity: 1,  y: 0,},
+    }}
+    transition={{duration: 1, }}
+    className='md:h-[374px]  ml-5 mr-5 lg:mr-0 mt-5 px-5 py-4 bg-[#FFF] dark:bg-[#0D0D0D] border border-[#EDF2F7] dark:border-[#1A1A1A] rounded-[14px] font-PJS'>
 
+        {/* this section contains the heaing for the chart */}
         <div className='flex justify-between items-center'>
             <h3 className='md:text-lg font-semibold text-[#26282C] dark:text-[#D3D5D9]'>Sales Trend</h3>
 
@@ -113,13 +138,20 @@ const SalesTrendChart = () => {
             </div>
         </div>
 
+        {/* this section is the chart itself */}
         <div className='h-full'>
-        <Bar options={options} data={data} width={window.innerWidth < 768 ? 300 : window.innerWidth < 1024 ? 696 : 696} height={window.innerWidth < 768 ? 200 : window.innerWidth < 1024 ? 250 : 288} className='mt-4' />
-
-
-        </div>
+          <Bar
+            id='chart'
+            options={options}
+            data={data}
+            width={window.innerWidth < 768 ? 300 : window.innerWidth < 1024 ? 696 : 696}
+            height={window.innerWidth < 768 ? 200 : window.innerWidth < 1024 ? 250 : 288}
+            className='mt-4'
+          />
         
-    </div>
+      </div>
+        
+    </motion.div>
   )
 }
 
