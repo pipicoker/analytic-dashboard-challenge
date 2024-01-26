@@ -13,7 +13,6 @@
     "@types/react-dom": "^18.2.18",
     "apexcharts": "^3.45.2",
     "chart.js": "^4.4.1",
-    "firebase": "^10.7.2",
     "framer-motion": "^11.0.3",
     "react": "^18.2.0",
     "react-apexcharts": "^1.4.1",

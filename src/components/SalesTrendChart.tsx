@@ -22,7 +22,6 @@ import {
 
    const options = {
     responsive: true,
-    
     scales: {
         x: {
             grid: {
@@ -56,10 +55,10 @@ import {
   const labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
 
-  const generateGradientColors = (context: any) => {
+  const GradientColor = (context: any) => {
     const gradient = context.chart.ctx.createLinearGradient(0, 0, 0, 400);
-    gradient.addColorStop(0, "rgba(52, 202, 165, 1)"); // Start color at the bottom of the bar
-    gradient.addColorStop(1, "rgba(255, 255, 255, 0.1)");
+    gradient.addColorStop(0, "#34CAA5"); // Start color at the bottom of the bar
+    gradient.addColorStop(1, "rgba(52, 202, 165, 0.00)");
     return gradient;
   };
    
@@ -68,10 +67,10 @@ import {
         datasets: [ {
           label: 'dataset',
           borderRadius: 20,
-          data: [60000, 32000, 10000, 8000, 9000, 2040, 12500, 37000, 19000, 4000, 17200, 13240],
+          data: [60000, 32000, 10000, 38000, 59000, 20040, 19500, 52000, 47000, 17000, 17200, 13240],
           barThickness: 30,
           backgroundColor: 'rgba(52, 202, 165, 0.10)',
-          hoverBackgroundColor: generateGradientColors
+          hoverBackgroundColor: GradientColor
         }
           
         ],
