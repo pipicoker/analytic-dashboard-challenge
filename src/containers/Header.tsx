@@ -16,20 +16,25 @@ const Header = () => {
 
   return (
     <header className='w-full flex justify-between items-center bg-[#FAFAFA] dark:bg-[#1A222A] px-5 py-5 space-x-2 md:space-x-0' >
-      <div className='flex items-center space-x-2'>
-        <div className='md:hidden'>
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-    <path fill-rule="evenodd" clip-rule="evenodd" d="M20 40C31.0457 40 40 31.0457 40 20C40 8.95431 31.0457 0 20 0C8.95429 0 0 8.95431 0 20C0 31.0457 8.95429 40 20 40ZM26.2393 9.31684C26.543 8.23805 25.4961 7.60013 24.54 8.2813L11.1931 17.7896C10.1562 18.5283 10.3193 20 11.4381 20H14.9527V19.9728H21.8025L16.2212 21.9421L13.7607 30.6832C13.457 31.762 14.5038 32.3999 15.46 31.7187L28.8069 22.2105C29.8438 21.4718 29.6806 20 28.5619 20H23.2321L26.2393 9.31684Z" fill="#34CAA5"/>
-            </svg>
+      <div className='flex items-center space-x-4'>
+          <div className='md:hidden'>
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M20 40C31.0457 40 40 31.0457 40 20C40 8.95431 31.0457 0 20 0C8.95429 0 0 8.95431 0 20C0 31.0457 8.95429 40 20 40ZM26.2393 9.31684C26.543 8.23805 25.4961 7.60013 24.54 8.2813L11.1931 17.7896C10.1562 18.5283 10.3193 20 11.4381 20H14.9527V19.9728H21.8025L16.2212 21.9421L13.7607 30.6832C13.457 31.762 14.5038 32.3999 15.46 31.7187L28.8069 22.2105C29.8438 21.4718 29.6806 20 28.5619 20H23.2321L26.2393 9.31684Z" fill="#34CAA5"/>
+              </svg>
           </div>
-          <h1 className='flex text-[#26282C] dark:text-[#D3D5D9]  text-lg md:text-xl font-semibold'>Dashboard</h1>
+          <div>
+          <h1 className=' text-[#26282C] dark:text-[#D3D5D9]  text-lg md:text-xl font-semibold'>Dashboard</h1>
+          <p className='md:hidden text-[#26282C] dark:text-[#D3D5D9] font-medium md:text-sm text-[8px]'>{formattedDate}</p>
+
+          </div>
+          
       </div>
      
 
       <div className='flex items-center font-inter'>
         <SearchInput />
 
-        <div className='flex items-center md:pl-[22px] gap-x-2.5'>
+        <div className='hidden md:flex items-center md:pl-[22px] gap-x-2.5'>
 
           <div className={theme === "light" ? 'hidden md:flex ' : 'hidden'}>
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
