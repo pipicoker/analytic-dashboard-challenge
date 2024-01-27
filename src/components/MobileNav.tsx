@@ -50,7 +50,7 @@ const MobileNav = () => {
             ))}
           </div>
 
-          <div className='order-1  bg-[#FFF] dark:bg-[#0D0D0D] rounded-full p-2 flex   items-center space-x-12'>
+          <div className='order-1  bg-[#FFF] dark:bg-[#0D0D0D] rounded-full p-2 flex   items-center space-x-6'>
           {icons.slice(7, 9).map((icon, index: number) => (
             <div 
             key={index} 
