@@ -1,5 +1,5 @@
-import React, {useEffect, useRef, useState} from 'react'
-import {useAnimation, motion, useInView} from 'framer-motion'
+import React, {useEffect,  useState} from 'react'
+
 import icons from '../assets/data/nav-icons'
 import { useDispatch, useSelector } from 'react-redux'
 
@@ -26,18 +26,7 @@ const MobileNav = () => {
   
     }, [theme])
 
-    const controls = useAnimation()
-    const ref = useRef(null)
-    const inView = useInView(ref)
 
-    useEffect(() => {
-        if(inView) {
-            controls.start('visible')
-        }
-        else{
-            controls.start('hidden')
-        }
-    }, [controls, inView])
   
     
   return (
