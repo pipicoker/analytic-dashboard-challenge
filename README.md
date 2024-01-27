@@ -5,13 +5,13 @@ This projet is a front-end challenge by Geepay
 This project is one page dashboard, where users can see details of their sales, total income, e.t.c
 
 ## Features
-Desktop screen
-Tablet screen
-Mobile screen
-switch to light/dark theme
-search
-progress bar
-profile dropdown
+Desktop screen,
+Tablet screen,
+Mobile screen,
+switch to light/dark theme,
+search,
+progress bar,
+profile dropdown,
 
 ## Prerequisites
 install node/npm
