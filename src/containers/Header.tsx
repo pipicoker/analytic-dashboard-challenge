@@ -49,7 +49,7 @@ const Header = () => {
             <div>
             <h1 className=' text-[#26282C] dark:text-[#D3D5D9]  text-lg md:text-xl font-semibold'>Dashboard</h1>
 
-            <p className='lg:hidden text-[#26282C] dark:text-[#D3D5D9] font-medium text-xs'>{formattedDate}</p>
+            <p className='lg:hidden text-[#26282C] dark:text-[#D3D5D9] font-medium text-[8px] md:text-[10px]'>{formattedDate}</p>
 
             </div>
             
