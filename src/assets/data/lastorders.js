@@ -15,28 +15,28 @@ export const lastOrders = [
     {
         pix: jaydon,
         name: 'Jaydon Vacaro',
-        date: 'Nov 15, 2023',
+        date: 'Nov 14, 2023',
         amount: '150,000',
         status: 'Refund'
     },
     {
         pix: corey,
         name: 'Corey Schieifer',
-        date: 'Nov 14, 2023',
+        date: 'Nov 13, 2023',
         amount: '87,000',
         status: 'Paid'
     },
     {
         pix: cooper,
         name: 'Cooper Press',
-        date: 'Nov 14, 2023',
+        date: 'Nov 12, 2023',
         amount: '100,000',
         status: 'Refund'
     },
     {
         pix: philip,
         name: 'Philip Lubin',
-        date: 'Nov 13, 2023',
+        date: 'Nov 11, 2023',
         amount: '78,000',
         status: 'Paid'
     },

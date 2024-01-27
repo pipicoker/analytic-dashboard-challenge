@@ -57,7 +57,7 @@ import {
 
   const GradientColor = (context: any) => {
     const gradient = context.chart.ctx.createLinearGradient(0, 0, 0, 400);
-    gradient.addColorStop(0, "#34CAA5"); // Start color at the bottom of the bar
+    gradient.addColorStop(0, "#34CAA5"); 
     gradient.addColorStop(1, "rgba(52, 202, 165, 0.00)");
     return gradient;
   };
@@ -141,6 +141,7 @@ const SalesTrendChart = () => {
         <div className='h-full'>
           <Bar
             id='chart'
+            data-testid="chart"
             options={options}
             data={data}
             width={window.innerWidth < 768 ? 300 : window.innerWidth < 1024 ? 696 : 696}

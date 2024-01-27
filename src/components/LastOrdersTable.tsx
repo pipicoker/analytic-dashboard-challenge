@@ -25,7 +25,7 @@ const LastOrdersTable = () => {
                   <tr key={index} className=''>
 
                     <td className='flex items-center gap-[10px] text-[#3A3F51] font-semibold pt-3 pb-4'>
-                      <img src={data.pix} alt="" className='w-8 h-8 rounded-[33.333px]'/> {data.name}
+                      <img src={data.pix} alt="user pix" className='w-8 h-8 rounded-[33.333px]'/> {data.name}
                     </td>
 
                     <td className='text-[#737373] '>{data.date}</td>

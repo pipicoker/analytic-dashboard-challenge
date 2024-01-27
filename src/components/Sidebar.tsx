@@ -6,7 +6,7 @@ import { selectTheme, setTheme } from '../redux/theme.Slice'
 
 const Sidebar = () => {
   const theme = useSelector(selectTheme)
-  const [activebtn, setActivebtn] = useState(0)
+  const [activebtn, setActivebtn] = useState(0) //btn to toggle the theme
   const dispatch = useDispatch()
 
   useEffect(() => {
@@ -36,9 +36,9 @@ const Sidebar = () => {
           >
             {icons.slice(0, 6).map((icon, index) => (
               index !== 1 && (
-                <div key={index}>
+                <div key={index} data-testid={`light-icon-${index}`}>
                   {icon}
-                </div>
+                </div> 
               )
               
             ))}
@@ -46,7 +46,7 @@ const Sidebar = () => {
 
           <div className={theme === 'dark' ?  ' flex mt-7  flex-col space-y-8 ' : 'hidden'}>
             {icons.slice(1, 6).map((icon, index) => (
-              <div key={index} className=''>
+              <div key={index} className='' data-testid={`dark-icon-${index}`}>
                 {icon}
               </div>
             ))}
@@ -58,13 +58,14 @@ const Sidebar = () => {
             key={index} 
             className={index === activebtn ?  'bg-[#34CAA5] w-[30px] h-[30px] flex justify-center  rounded-[94px] items-center' : "bg-[#FFF"} 
             onClick={() => handleThemeSwitch(index)}
+            data-testid={`theme-switch-${index}`}
             >{icon}</div>
           ))}
         </div>
 
 
 
-        <div className='mt-[202px] space-y-6'>
+        <div className='mt-[202px] space-y-6' data-testid="other-icons">
             {icons.slice(9, 12).map((icon, index) => (
                 <div key={index}>
                     {icon}
