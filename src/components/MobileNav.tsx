@@ -30,7 +30,7 @@ const MobileNav = () => {
     <nav className='w-screen py-4 px-2  bottom-0 fixed flex lg:hidden space-x-6 md:space-x-12 items-center md:justify-center bg-[#F7F8FA] dark:bg-[#131313] border-r border-r-[#EBECF2] dark:border-r-[#171823] overflow-x-scroll no-scrollbar'>
         
 
-          <div  className={theme === 'light' ? 'flex  items-center space-x-6 md:space-x-12 order-2 ml-6' : 'hidden'}
+          <div  className={theme === 'light' ? 'flex  items-center space-x-12 order-2 ml-6' : 'hidden'}
           >
             {icons.slice(0, 6).map((icon, index) => (
               index !== 1 && (
@@ -50,7 +50,7 @@ const MobileNav = () => {
             ))}
           </div>
 
-          <div className='order-1  bg-[#FFF] dark:bg-[#0D0D0D] rounded-full p-2 flex   items-center space-x-6'>
+          <div className='order-1  bg-[#FFF] dark:bg-[#0D0D0D] rounded-full p-2 flex   items-center space-x-12'>
           {icons.slice(7, 9).map((icon, index: number) => (
             <div 
             key={index} 
