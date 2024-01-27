@@ -34,7 +34,7 @@ const MobileNav = () => {
       <nav className='w-screen px-4 py-4   bottom-0 fixed flex lg:hidden gap-8 items-center md:justify-center bg-[#F7F8FA] dark:bg-[#131313] border-r border-r-[#EBECF2] dark:border-r-[#171823] overflow-x-scroll no-scrollbar'>
         
           
-        <div  className={theme === 'light' ? 'flex  items-center space-x-12 order-2 ml-6' : 'hidden'}
+        <div  className={theme === 'light' ? 'flex  items-center space-x-12 order-2 ' : 'hidden'}
         >
           {icons.slice(0, 6).map((icon, index) => (
             index !== 1 && (
