@@ -39,7 +39,7 @@ const UserProfileDropdown = () => {
                 <p className='text-[#26282C] dark:text-[#D3D5D9]'>Justin Bergson</p>
                 <p className='text-sm text-[#787486] dark:text-[#787486]'>Justin@gmail.com</p>
                 </div>
-                <button className='hidden lg:flex'  id="dropdownDefaultButton" data-dropdown-toggle="dropdown" type="button"
+                <button className='hidden md:flex'  id="dropdownDefaultButton" data-dropdown-toggle="dropdown" type="button"
                 onClick={toggleDropdown}
                 >
                     <div className={theme === "light" ? 'flex' : 'hidden'}>
@@ -62,11 +62,11 @@ const UserProfileDropdown = () => {
 
 
         {isDropdownOpen && (
-                    <div id="dropdown" className="bg-[#F7F8FA] absolute mt-5 p-4 rounded-xl text-[#26282C]">
-                        <p>Full Name: Justin Bergson </p>
-                        <p>Phone Number: +234 5412784</p>
-                        <p>Age: 32 years</p>
-                        <p>sex: Male</p>
+                    <div id="dropdown" className="hidden bg-[#FAFAFA] dark:bg-[#1A222A] absolute mt-2 mr-4 p-4 rounded-xl text-[#787486] dark:text-[#787486] border border-[#DADDDD] dark:border-[#2F3232] md:flex flex-col divide-y space-y-3 text-xs">
+                        <p >Full Name: <span className='text-sm text-[#26282C] dark:text-[#D3D5D9]'>Justin Bergson </span></p>
+                        <p >Phone Number: <span className='text-sm text-[#26282C] dark:text-[#D3D5D9]'>+234 5412784</span></p>
+                        <p>Age: <span className='text-sm text-[#26282C] dark:text-[#D3D5D9]'>32 years</span></p>
+                        <p>sex: <span className='text-sm text-[#26282C] dark:text-[#D3D5D9]'>Male</span></p>
                     
                 </div>
 
