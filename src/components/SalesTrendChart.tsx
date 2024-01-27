@@ -52,26 +52,17 @@ import {
 
   };
 
-  
-
-
   const GradientColor = (context: any) => {
     const gradient = context.chart.ctx.createLinearGradient(0, 0, 0, 400);
     gradient.addColorStop(0, "#34CAA5"); 
     gradient.addColorStop(1, "rgba(52, 202, 165, 0.00)");
     return gradient;
   };
-   
- 
-    
-
 
 const SalesTrendChart = () => {
     const theme = useSelector(selectTheme)
     const [sortbyBtn, setSortbyBtn] = useState('Monthly')
     const [openDropDown, setOpenDropDown] = useState(false)
-
-    // const labels = ;['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
     const [labels, setLabels] = useState(['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'])
     const [range, setRange] = useState([60000, 32000, 10000, 38000, 59000, 20040, 19500, 52000, 47000, 17000, 17200, 13240])
     let data = {
@@ -162,7 +153,7 @@ const SalesTrendChart = () => {
               setLabels(['2018','2019', '2020', '2021', '2022', '2023', '2024'])
               setRange([500000, 200000, 350000, 450000, 250000, 400000, 200000])
               }} className='cursor-pointer pt-2'>
-              yearly</p>
+              Yearly</p>
             <p onClick={() => {
               setOpenDropDown(false)
               setSortbyBtn('Montly')

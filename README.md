@@ -12,6 +12,7 @@ switch to light/dark theme,
 search,
 progress bar,
 profile dropdown,
+sort by monthly, daily, weekly
 
 ## Prerequisites
 install node/npm
@@ -21,3 +22,6 @@ React
 Typescript
 Tailwind css
 react-chartjs-2
+
+## State management
+Redux
