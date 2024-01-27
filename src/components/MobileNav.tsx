@@ -1,4 +1,5 @@
-import React, {  useEffect , useState} from 'react'
+import React, {useEffect, useRef, useState} from 'react'
+import {useAnimation, motion, useInView} from 'framer-motion'
 import icons from '../assets/data/nav-icons'
 import { useDispatch, useSelector } from 'react-redux'
 
@@ -24,12 +25,25 @@ const MobileNav = () => {
       }
   
     }, [theme])
+
+    const controls = useAnimation()
+    const ref = useRef(null)
+    const inView = useInView(ref)
+
+    useEffect(() => {
+        if(inView) {
+            controls.start('visible')
+        }
+        else{
+            controls.start('hidden')
+        }
+    }, [controls, inView])
   
     
   return (
-    <nav className='w-screen py-4 px-2  bottom-0 fixed flex lg:hidden space-x-6 md:space-x-12 items-center md:justify-center bg-[#F7F8FA] dark:bg-[#131313] border-r border-r-[#EBECF2] dark:border-r-[#171823] overflow-x-scroll no-scrollbar'>
+    <nav className='w-screen py-4 px-2  bottom-0 fixed flex lg:hidden space-x-12 items-center md:justify-center bg-[#F7F8FA] dark:bg-[#131313] border-r border-r-[#EBECF2] dark:border-r-[#171823] overflow-x-scroll no-scrollbar'>
         
-
+          
           <div  className={theme === 'light' ? 'flex  items-center space-x-12 order-2 ml-6' : 'hidden'}
           >
             {icons.slice(0, 6).map((icon, index) => (
