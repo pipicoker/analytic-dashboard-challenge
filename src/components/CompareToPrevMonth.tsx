@@ -76,7 +76,7 @@ const CompareToPrevMonth: React.FC = () => {
               <h4 className='mt-[10px] capitalize text-lg font-medium text-[rgb(137,137,137)]'>{data.title}</h4>
               <p className=' text-[#3A3F51] font-semibold text-2xl'>{data.amount}</p>
 
-              <div className='mt-[10px] flex gap-[10px] items-center'>
+              <div className='mt-[10px] flex justify-between md:gap-[10px] items-center'>
                 <div className={`${data.type ==='increase' ? 'bg-light-green text-[#34CAA5]' : 'bg-light-red text-[#ED544E]'} w-[70px] rounded-[1000px] justify-center items-center flex gap-1  py-1 text-xs font-medium`}>
                     {data.type === 'increase' && (
                       <svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none">
