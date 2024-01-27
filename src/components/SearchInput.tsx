@@ -3,7 +3,7 @@ import React from 'react'
 const SearchInput = () => {
   return (
     <div>
-        <form className="flex items-center ">   
+        <form className="flex items-center ml-4">   
        
             <div className="relative w-full  items-center pr-6">
 
@@ -13,7 +13,7 @@ const SearchInput = () => {
                   </svg>
             
                 </div>
-                <input type="text" id="search" className="hidden md:flex h-12  lg:w-[349px] pl-10 text-[#A3A3A3]  rounded-3xl bg-[#FFF] dark:bg-[#0D0D0D] border  border-[#DADDDD] dark:border-[#2E3232]" placeholder="Search..." />
+                <input type="text" id="search" className="hidden md:flex h-12 md:w-[220px]  lg:w-[349px] pl-10 text-[#A3A3A3]  rounded-3xl bg-[#FFF] dark:bg-[#0D0D0D] border  border-[#DADDDD] dark:border-[#2E3232]" placeholder="Search..." />
             </div>
        
         </form>

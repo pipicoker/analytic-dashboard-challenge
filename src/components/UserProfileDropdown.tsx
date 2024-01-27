@@ -35,7 +35,7 @@ const UserProfileDropdown = () => {
 
                 <img src={profile} alt="profile pix" className='w-[38px] h-[38px] rounded-[19px]'/>
 
-                <div className='hidden lg:flex lg:flex-col text-right' >
+                <div className='hidden md:flex md:flex-col text-right' >
                 <p className='text-[#26282C] dark:text-[#D3D5D9]'>Justin Bergson</p>
                 <p className='text-sm text-[#787486] dark:text-[#787486]'>Justin@gmail.com</p>
                 </div>
